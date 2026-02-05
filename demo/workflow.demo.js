@@ -50,8 +50,7 @@ const execute = async function() {
 
     let exportUrl;
     // wait for generation to complete, this can be handled by a worker connected to an api via web sockets, each runnable task will be updated after completion
-    await setTimeout(async()=>{}, 240000)
-
+    // add breakpoint below and wait used postman to check if generation complete before completion
     const retrieve = await gamma.getGeneratedPresentation(generationId);
 
     ({exportUrl} = retrieve?.data); // export url is the generated pdf
