@@ -1,13 +1,13 @@
 const execute = async function() {
 
     try {
-    // const { 
-    //     GAMMA_API_KEY: apiKey,
-    //     GAMMA_ID: gammaId, 
-    //     THEME_ID: themeId
-    // } = process?.env;
+     const { 
+         GAMMA_API_KEY: apiKey,
+         GAMMA_ID: gammaId, 
+         THEME_ID: themeId
+    } = process?.env;
 
-    const [,,apiKey, gammaId, themeId] = process.argv;
+    // const [,,apiKey, gammaId, themeId] = process.argv;
 
     const OllamaClient = require('../services/ollama.service');
     const GammaClient = require('../services/gamma.service');
